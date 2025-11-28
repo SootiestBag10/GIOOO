@@ -36,7 +36,7 @@
 
         h2{
             font-size: 1.5rem;
-            margin-top: 2.3rem;
+            margin-top: 2.5rem;
             margin-bottom: 0.3rem;
         }
 
@@ -52,19 +52,19 @@
             margin: 0.3rem auto 1rem auto;
         }
 
-        /* Contenedor del corazón para controlar espacio */
+        /* Contenedor del corazón (espacios arriba/abajo) */
         .heart-wrapper{
-            margin-top: 2.5rem;   /* baja el corazón para que no tape "GIOOO" */
-            margin-bottom: 1.8rem;
+            margin-top: 3rem;    /* baja el corazón para que no tape "GIOOO" */
+            margin-bottom: 2rem; /* separa del texto de abajo */
         }
 
-        /* CORAZÓN PERFECTO */
+        /* CORAZÓN CLÁSICO Y SIMÉTRICO */
         .heart{
             position: relative;
             width: 150px;
             height: 150px;
             background: #ff002b;
-            transform: rotate(45deg);
+            transform: rotate(-45deg);          /* ojo: -45, no 45 */
             margin: 0 auto;
             box-shadow: 0 0 60px rgba(242,0,68,0.9);
             animation: palpitar 1.1s infinite;
@@ -81,21 +81,23 @@
             box-shadow: 0 0 60px rgba(242,0,68,0.9);
         }
 
-        /* círculo izquierdo */
+        /* círculo de arriba */
         .heart::before{
-            right: 50%;
+            top: -75px;   /* la mitad de la altura en negativo */
+            left: 0;
         }
 
-        /* círculo superior */
+        /* círculo de la izquierda */
         .heart::after{
-            top: -50%;
+            left: 75px;   /* la mitad del ancho hacia la derecha */
+            top: 0;
         }
 
         @keyframes palpitar{
-            0%   { transform: rotate(45deg) scale(1); }
-            30%  { transform: rotate(45deg) scale(1.12); }
-            60%  { transform: rotate(45deg) scale(1); }
-            100% { transform: rotate(45deg) scale(0.96); }
+            0%   { transform: rotate(-45deg) scale(1); }
+            30%  { transform: rotate(-45deg) scale(1.12); }
+            60%  { transform: rotate(-45deg) scale(1); }
+            100% { transform: rotate(-45deg) scale(0.96); }
         }
 
         /* Ajuste para móvil */
@@ -103,9 +105,28 @@
             h1{ font-size: 1.7rem; }
             h2{ font-size: 1.3rem; }
 
+            .heart{
+                width: 130px;
+                height: 130px;
+            }
+
+            .heart::before,
+            .heart::after{
+                width: 130px;
+                height: 130px;
+            }
+
+            .heart::before{
+                top: -65px;
+            }
+
+            .heart::after{
+                left: 65px;
+            }
+
             .heart-wrapper{
-                margin-top: 2rem;
-                margin-bottom: 1.5rem;
+                margin-top: 2.5rem;
+                margin-bottom: 1.8rem;
             }
         }
     </style>
