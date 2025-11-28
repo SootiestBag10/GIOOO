@@ -48,7 +48,7 @@ hr{
     margin: 5px auto 15px auto;
 }
 
-/* CORAZÓN BÁSICO (sin pseudo-elementos todavía) */
+/* CORAZÓN BÁSICO (solo un cuadro rojo) */
 .heart{
     width: 150px;
     height: 150px;
