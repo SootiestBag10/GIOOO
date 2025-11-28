@@ -13,7 +13,6 @@ body{
     font-family: Arial, Helvetica, sans-serif;
 }
 
-/* CONTENEDOR CENTRAL */
 .contenido{
     text-align: center;
     color: white;
@@ -21,16 +20,17 @@ body{
     max-width: 400px;
 }
 
-/* TITULOS Y TEXTO */
+/* Títulos */
 h1{
     font-size: 2rem;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
     color: #3a6dff;
+    margin-top: -40px; /* SUBE EL TÍTULO */
 }
 
 h2{
     font-size: 1.6rem;
-    margin: 18px 0 5px 0;
+    margin: 25px 0 10px 0;
 }
 
 .frase{
@@ -43,10 +43,10 @@ hr{
     border: none;
     border-top: 1px solid #ffffff;
     width: 70%;
-    margin: 5px auto 10px auto;
+    margin: 5px auto 15px auto;
 }
 
-/* CORAZÓN */
+/* Corazón */
 .heart{
     position: relative;
     width: 150px;
@@ -55,7 +55,7 @@ hr{
     transform: rotate(45deg);
     box-shadow: 0 0 40px #F20044;
     animation: palpitar 1s infinite;
-    margin: 15px auto;
+    margin: 10px auto 30px auto; /* MÁS ESPACIO ARRIBA Y ABAJO */
 }
 
 .heart::before,
@@ -77,16 +77,14 @@ hr{
     top: -50%;
 }
 
+/* Animación */
 @keyframes palpitar{
     0%{ transform: rotate(45deg) scale(1); }
-    40%{ transform: rotate(45deg) scale(1.15); }
+    40%{ transform: rotate(45deg) scale(1.13); }
     80%{ transform: rotate(45deg) scale(1); }
     100%{ transform: rotate(45deg) scale(0.95); }
 }
 
-/* MÓVIL */
+/* Para celular */
 @media (max-width: 480px){
-    h1{ font-size: 1.6rem; }
-    h2{ font-size: 1.3rem; }
-    .frase{ font-size: 0.9rem; }
-}
+    h1{ font-size: 1.6rem; margin-top: 0; }
