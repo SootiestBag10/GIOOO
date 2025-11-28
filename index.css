@@ -4,7 +4,6 @@
     box-sizing: border-box;
 }
 
-/* FONDO Y CENTRADO */
 body{
     min-height: 100vh;
     display: flex;
@@ -14,7 +13,7 @@ body{
     font-family: Arial, Helvetica, sans-serif;
 }
 
-/* CONTENIDO CENTRAL */
+/* CONTENEDOR CENTRAL */
 .contenido{
     text-align: center;
     color: white;
@@ -22,6 +21,7 @@ body{
     max-width: 400px;
 }
 
+/* TITULOS Y TEXTO */
 h1{
     font-size: 2rem;
     margin-bottom: 10px;
@@ -30,20 +30,20 @@ h1{
 
 h2{
     font-size: 1.6rem;
-    margin: 20px 0 5px 0;
+    margin: 18px 0 5px 0;
 }
 
 .frase{
-    margin-top: 10px;
+    margin-top: 8px;
     font-size: 1rem;
-    opacity: 0.8;
+    opacity: 0.85;
 }
 
 hr{
     border: none;
     border-top: 1px solid #ffffff;
     width: 70%;
-    margin: 5px auto 15px auto;
+    margin: 5px auto 10px auto;
 }
 
 /* CORAZÓN */
@@ -55,7 +55,7 @@ hr{
     transform: rotate(45deg);
     box-shadow: 0 0 40px #F20044;
     animation: palpitar 1s infinite;
-    margin: 20px auto;
+    margin: 15px auto;
 }
 
 .heart::before,
@@ -77,23 +77,14 @@ hr{
     top: -50%;
 }
 
-/* ANIMACIÓN */
 @keyframes palpitar{
-    0%{
-        transform: rotate(45deg) scale(1.0);
-    }
-    40%{
-        transform: rotate(45deg) scale(1.15);
-    }
-    80%{
-        transform: rotate(45deg) scale(1.0);
-    }
-    100%{
-        transform: rotate(45deg) scale(0.95);
-    }    
+    0%{ transform: rotate(45deg) scale(1); }
+    40%{ transform: rotate(45deg) scale(1.15); }
+    80%{ transform: rotate(45deg) scale(1); }
+    100%{ transform: rotate(45deg) scale(0.95); }
 }
 
-/* OPCIONAL: AJUSTE PARA CELULAR */
+/* MÓVIL */
 @media (max-width: 480px){
     h1{ font-size: 1.6rem; }
     h2{ font-size: 1.3rem; }
