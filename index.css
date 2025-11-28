@@ -1,9 +1,11 @@
+/* RESET */
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* FONDO Y CENTRADO */
 body{
     min-height: 100vh;
     display: flex;
@@ -13,6 +15,7 @@ body{
     font-family: Arial, Helvetica, sans-serif;
 }
 
+/* CONTENIDO */
 .contenido{
     text-align: center;
     color: white;
@@ -20,12 +23,11 @@ body{
     max-width: 400px;
 }
 
-/* Títulos */
+/* TEXTOS */
 h1{
     font-size: 2rem;
     margin-bottom: 15px;
     color: #3a6dff;
-    margin-top: -40px; /* SUBE EL TÍTULO */
 }
 
 h2{
@@ -46,45 +48,11 @@ hr{
     margin: 5px auto 15px auto;
 }
 
-/* Corazón */
+/* CORAZÓN BÁSICO (sin pseudo-elementos todavía) */
 .heart{
-    position: relative;
     width: 150px;
     height: 150px;
     background: red;
-    transform: rotate(45deg);
-    box-shadow: 0 0 40px #F20044;
-    animation: palpitar 1s infinite;
-    margin: 10px auto 30px auto; /* MÁS ESPACIO ARRIBA Y ABAJO */
+    margin: 10px auto 30px auto;
+    border-radius: 20px;
 }
-
-.heart::before,
-.heart::after{
-    content: "";
-    position: absolute;
-    height: 150px;
-    width: 150px;
-    background: red;
-    border-radius: 50%;
-    box-shadow: 0 0 40px #F20044;
-}
-
-.heart::before{
-    right: 50%;
-}
-
-.heart::after{
-    top: -50%;
-}
-
-/* Animación */
-@keyframes palpitar{
-    0%{ transform: rotate(45deg) scale(1); }
-    40%{ transform: rotate(45deg) scale(1.13); }
-    80%{ transform: rotate(45deg) scale(1); }
-    100%{ transform: rotate(45deg) scale(0.95); }
-}
-
-/* Para celular */
-@media (max-width: 480px){
-    h1{ font-size: 1.6rem; margin-top: 0; }
