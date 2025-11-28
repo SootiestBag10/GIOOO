@@ -1,94 +1,18 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="UTF-8">
-<title>Corazón Animado</title>
-<style>
-    *{
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-    }
-
-    body{
-        min-height: 100vh;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        background: radial-gradient(circle at top, #f20044, #120010);
-        font-family: Arial, Helvetica, sans-serif;
-    }
-
-    .contenido{
-        text-align: center;
-        color: white;
-    }
-
-    h1{
-        color: white;
-        margin-bottom: 5px;
-    }
-
-    h2{
-        color: white;
-        font-weight: normal;
-        margin-bottom: 25px;
-    }
-
-    .heart{
-        position: relative;
-        width: 150px;
-        height: 150px;
-        background: red;
-        transform: rotate(45deg);
-        box-shadow: 0 0 40px #F20044;
-        animation: palpitar 1s infinite;
-        margin: 0 auto 25px auto;
-    }
-
-    .heart::before{
-        content: "";
-        position: absolute;
-        height: 150px;
-        width: 150px;
-        background: red;
-        right: 50%;
-        border-radius: 50%;
-        box-shadow: 0 0 40px #F20044;
-    }
-
-    .heart::after{
-        content: "";
-        position: absolute;
-        height: 150px;
-        width: 150px;
-        background: red;
-        top: -50%;
-        border-radius: 50%;
-        box-shadow: 0 0 40px #F20044;
-    }
-
-    @keyframes palpitar{
-        0%{
-            transform: rotate(45deg) scale(1.05);
-        }
-        40%{
-            transform: rotate(45deg) scale(1.15);
-        }
-        80%{
-            transform: rotate(45deg) scale(1.0);
-        }
-        100%{
-            transform: rotate(45deg) scale(0.95);
-        }    
-    }
-</style>
+    <meta charset="UTF-8">
+    <title>Corazón para Gio</title>
+    <link rel="stylesheet" href="index.css">
 </head>
 <body>
     <div class="contenido">
-        <h1>Te quiero</h1>
-        <h2>Corazón animado con CSS</h2>
+        <h1>¡GIOOO!</h1>
+        <hr>
         <div class="heart"></div>
+        <h2>Giovanna Dávila</h2>
+        <hr>
+        <p class="frase">Eres mi todo</p>
     </div>
 </body>
 </html>
