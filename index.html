@@ -36,7 +36,7 @@
 
         h2{
             font-size: 1.5rem;
-            margin-top: 2rem;
+            margin-top: 2.3rem;
             margin-bottom: 0.3rem;
         }
 
@@ -52,15 +52,17 @@
             margin: 0.3rem auto 1rem auto;
         }
 
-        /* Corazón centrado */
+        /* Contenedor del corazón para controlar espacio */
         .heart-wrapper{
-            margin-top: 1.5rem;
+            margin-top: 2.5rem;   /* baja el corazón para que no tape "GIOOO" */
+            margin-bottom: 1.8rem;
         }
 
+        /* CORAZÓN PERFECTO */
         .heart{
             position: relative;
-            width: 160px;
-            height: 160px;
+            width: 150px;
+            height: 150px;
             background: #ff002b;
             transform: rotate(45deg);
             margin: 0 auto;
@@ -72,19 +74,21 @@
         .heart::after{
             content: "";
             position: absolute;
-            width: 160px;
-            height: 160px;
+            width: 150px;
+            height: 150px;
             background: #ff002b;
             border-radius: 50%;
             box-shadow: 0 0 60px rgba(242,0,68,0.9);
         }
 
+        /* círculo izquierdo */
         .heart::before{
-            left: -80px;
+            right: 50%;
         }
 
+        /* círculo superior */
         .heart::after{
-            top: -80px;
+            top: -50%;
         }
 
         @keyframes palpitar{
@@ -99,23 +103,9 @@
             h1{ font-size: 1.7rem; }
             h2{ font-size: 1.3rem; }
 
-            .heart{
-                width: 135px;
-                height: 135px;
-            }
-
-            .heart::before,
-            .heart::after{
-                width: 135px;
-                height: 135px;
-            }
-
-            .heart::before{
-                left: -67.5px;
-            }
-
-            .heart::after{
-                top: -67.5px;
+            .heart-wrapper{
+                margin-top: 2rem;
+                margin-bottom: 1.5rem;
             }
         }
     </style>
